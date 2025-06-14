@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
             <h2>Planes de Verano</h2>
             <article>
                 <h3>Opción 1: Playa La Punta, Callao</h3>
-                <img src="La Punta, Callao.jpg" alt="Imagen de playa" class="plan-img">
+                <img src="La Punta, Callao.jpg" alt="Imagen de playa La punta" class="plan-img">
                 <p>CÓMO LLEGAR: En la Plaza 2 de Mayo abordaremos una combi que vaya al Callao y La punta, costo aprox 6so</p>
                 <div class="pros-contras">
                     <div class="pros">
@@ -41,7 +41,7 @@
             </article>
             <article>
                 <h3>Opción 2: Playa Blanca, Punta Hermosa</h3>
-                <img src="Playa Blanca.jpg" alt="Imagen de montañas" class="plan-img">
+                <img src="Playa Blanca.jpg" alt="Imagen de Playa Blanca" class="plan-img">
                 <p>CÓMO LLEGAR: Al frente del Mall del Sur debemo tomar cualquier bus y pediremos que nos deje en Punta Hermosa, costo aprox 8so, bajamos en el lugar y caminamos a la Playa Blanca</p>
                 <div class="pros-contras">
                     <div class="pros">
@@ -63,7 +63,7 @@
             </article>
             <article>
                 <h3>Opción 3: Playa El Silencio, Punta Hermosa</h3>
-                <img src="Playa El Silencio.jpg" alt="Imagen de cultura" class="plan-img">
+                <img src="Playa El Silencio.jpg" alt="Imagen de Playa El silencio" class="plan-img">
                 <p>CÓMO LLEGAR: Al frente del Mall del Sur debemos tomar cualquier bus y pedimos que nos lleve hasta punta hermosa, costo aprox 8so, bajamos y caminamos a la Playa El Silencio</p>
                 <div class="pros-contras">
                     <div class="pros">
@@ -86,7 +86,7 @@
             <article>
                 <h3>Opción 4: Playa Los Yuyos, Barranco</h3>
                 <img src="Playa Barranco.jpg" alt="Imagen de Playa Barranco" class="plan-img">
-                <p>CÓMO LLEGAR: Al costado del Centro Civico tomaremos el Corredor Azul(linea 301), costo aprox 2.50so aprox, bajamos en "plaza Butter" y caminamos hacia Barranco, luego a la playa Los Yuyos</p>
+                <p>CÓMO LLEGAR: Al costado del Centro Civico, tomaremos el Corredor Azul(linea 301), costo aprox 2.50so aprox, bajamos en "plaza Butter" y caminamos hacia Barranco, luego a la playa Los Yuyos</p>
                 <div class="pros-contras">
                     <div class="pros">
                         <h4>Pros:</h4>
@@ -112,5 +112,235 @@
         <p>&copy; 2025 Qué chucha sale. Todos los derechos reservados.</p>
     </footer>
     <script src="script.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Feliz Cumpleaños!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #ff4081;
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 5px 5px 3px rgb(88, 2, 38)
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .message {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .balloons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background-color: #ff69b4;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: relative;
+      animation: float 4s infinite ease-in-out;
+    }
+
+    .balloon:before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 30px;
+      background: #555;
+      transform: translateX(-50%);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e91e63;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 1rem;
+      z-index: 999;
+      text-align: center;
+    }
+
+    .popup h2 {
+      color: #ff4081;
+      margin-bottom: 1rem;
+    }
+
+    .close-btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .firework {
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%;
+      animation: explode 1s ease-out forwards;
+    }
+
+    @keyframes explode {
+      to {
+        transform: scale(20);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <header>¡Feliz Cumpleaños, Jess!</header>
+  <div class="content">
+    <div class="message">
+        Que sea un dia de mucha alegria y que la pases genial 🎉🎂
+    </div>
+
+    <div class="balloons">
+      <div class="balloon" style="background-color: #ff69b4;"></div>
+      <div class="balloon" style="background-color: #ffd700;"></div>
+      <div class="balloon" style="background-color: #87ceeb;"></div>
+      <div class="balloon" style="background-color: #98fb98;"></div>
+    </div>
+
+    <button onclick="showPopup(); launchFireworks();">¡Clickeame xd!</button>
+
+    <div class="popup" id="popup">
+      <h2>¡Eres increíble, Jess!</h2>
+      <p>Gracias por ser mi amiga. Nunca cambies. 💖</p>
+      <button class="close-btn" onclick="closePopup()">Cerrar</button>
+    </div>
+
+    <div class="gallery">
+      <img src="abejorros.jpeg" alt="Foto 1">
+      <img src="selfie.jpeg" alt="Foto 2">
+      <img src="selfie2.jpeg" alt="Foto 3">
+      <img src="perreo.jpeg" alt="Foto 4">
+    </div>
+  </div>
+
+  <footer>Hecho con cariño 💕 por yisus</footer>
+
+  <script>
+    function showPopup() {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function launchFireworks() {
+      for (let i = 0; i < 30; i++) {
+        const firework = document.createElement('div');
+        firework.classList.add('firework');
+        firework.style.top = Math.random() * window.innerHeight + 'px';
+        firework.style.left = Math.random() * window.innerWidth + 'px';
+        firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        document.body.appendChild(firework);
+
+        setTimeout(() => {
+          firework.remove();
+        }, 1000);
+      }
+    }
+  </script>
 </body>
 </html>
