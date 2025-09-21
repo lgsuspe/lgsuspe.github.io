@@ -17,15 +17,17 @@
       overflow:hidden;
       font-family: 'Segoe UI', sans-serif;
     }
+
     svg{
-      width:95%;
+      width:80%;
       height:auto;
       z-index:2;
       position:relative;
       filter:drop-shadow(0 6px 8px rgba(0,0,0,0.25));
     }
+
     text{
-      font-size:64px;
+      font-size:52px;
       fill:#d4af37;
       font-weight:600;
       text-anchor:middle;
@@ -48,6 +50,26 @@
       50%{ transform:translateY(2px) rotate(1deg); }
     }
 
+    /* Ajustes para pantallas grandes (PC) */
+    @media (min-width: 1024px){
+      svg{
+        width:60%;
+      }
+      text{
+        font-size:46px;
+      }
+    }
+
+    /* Ajustes para pantallas pequeñas (móvil) */
+    @media (max-width: 768px){
+      svg{
+        width:95%;
+      }
+      text{
+        font-size:64px;
+      }
+    }
+
     canvas{
       position:absolute;
       top:0;
@@ -60,102 +82,102 @@
 </head>
 <body>
   <canvas id="fireworks"></canvas>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1100">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000">
     <!-- Texto arriba -->
-    <text x="600" y="140">Eres hermosa, como estas flores amarillas :)</text>
+    <text x="600" y="120">Eres hermosa, como estas flores amarillas :)</text>
 
     <!-- Tallos -->
-    <g stroke="#388e3c" stroke-width="14" fill="none">
-      <path d="M600 900 Q590 720 600 540" />
-      <path d="M600 900 Q540 720 500 560" />
-      <path d="M600 900 Q660 720 700 560" />
-      <path d="M600 900 Q580 740 560 580" />
-      <path d="M600 900 Q620 740 640 580" />
+    <g stroke="#388e3c" stroke-width="12" fill="none">
+      <path d="M600 800 Q590 650 600 500" />
+      <path d="M600 800 Q540 650 500 520" />
+      <path d="M600 800 Q660 650 700 520" />
+      <path d="M600 800 Q580 670 560 540" />
+      <path d="M600 800 Q620 670 640 540" />
     </g>
 
     <!-- Hojas -->
     <g fill="#4caf50" opacity="0.9">
-      <ellipse cx="560" cy="720" rx="50" ry="18" transform="rotate(-30 560 720)"/>
-      <ellipse cx="640" cy="720" rx="50" ry="18" transform="rotate(30 640 720)"/>
-      <ellipse cx="520" cy="600" rx="45" ry="15" transform="rotate(-25 520 600)"/>
-      <ellipse cx="680" cy="600" rx="45" ry="15" transform="rotate(25 680 600)"/>
-      <ellipse cx="580" cy="650" rx="40" ry="12" transform="rotate(-20 580 650)"/>
-      <ellipse cx="620" cy="650" rx="40" ry="12" transform="rotate(20 620 650)"/>
+      <ellipse cx="560" cy="650" rx="40" ry="15" transform="rotate(-30 560 650)"/>
+      <ellipse cx="640" cy="650" rx="40" ry="15" transform="rotate(30 640 650)"/>
+      <ellipse cx="520" cy="570" rx="35" ry="12" transform="rotate(-25 520 570)"/>
+      <ellipse cx="680" cy="570" rx="35" ry="12" transform="rotate(25 680 570)"/>
+      <ellipse cx="580" cy="600" rx="30" ry="10" transform="rotate(-20 580 600)"/>
+      <ellipse cx="620" cy="600" rx="30" ry="10" transform="rotate(20 620 600)"/>
     </g>
 
     <!-- Girasoles -->
     <g id="sunflowers">
       <!-- Central -->
-      <g transform="translate(600,520)">
+      <g transform="translate(600,480)">
         <g fill="#ffeb3b">
-          <ellipse rx="140" ry="50" transform="rotate(0)"/>
-          <ellipse rx="140" ry="50" transform="rotate(30)"/>
-          <ellipse rx="140" ry="50" transform="rotate(60)"/>
-          <ellipse rx="140" ry="50" transform="rotate(90)"/>
-          <ellipse rx="140" ry="50" transform="rotate(120)"/>
-          <ellipse rx="140" ry="50" transform="rotate(150)"/>
+          <ellipse rx="110" ry="40" transform="rotate(0)"/>
+          <ellipse rx="110" ry="40" transform="rotate(30)"/>
+          <ellipse rx="110" ry="40" transform="rotate(60)"/>
+          <ellipse rx="110" ry="40" transform="rotate(90)"/>
+          <ellipse rx="110" ry="40" transform="rotate(120)"/>
+          <ellipse rx="110" ry="40" transform="rotate(150)"/>
         </g>
-        <circle r="55" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
+        <circle r="45" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
       </g>
 
       <!-- Izquierda -->
-      <g transform="translate(460,560) scale(1)">
+      <g transform="translate(500,500) scale(0.85)">
         <g fill="#ffeb3b">
-          <ellipse rx="120" ry="40" transform="rotate(0)"/>
-          <ellipse rx="120" ry="40" transform="rotate(30)"/>
-          <ellipse rx="120" ry="40" transform="rotate(60)"/>
-          <ellipse rx="120" ry="40" transform="rotate(90)"/>
-          <ellipse rx="120" ry="40" transform="rotate(120)"/>
-          <ellipse rx="120" ry="40" transform="rotate(150)"/>
+          <ellipse rx="95" ry="30" transform="rotate(0)"/>
+          <ellipse rx="95" ry="30" transform="rotate(30)"/>
+          <ellipse rx="95" ry="30" transform="rotate(60)"/>
+          <ellipse rx="95" ry="30" transform="rotate(90)"/>
+          <ellipse rx="95" ry="30" transform="rotate(120)"/>
+          <ellipse rx="95" ry="30" transform="rotate(150)"/>
         </g>
-        <circle r="50" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
+        <circle r="40" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
       </g>
 
       <!-- Derecha -->
-      <g transform="translate(740,560) scale(1)">
+      <g transform="translate(700,500) scale(0.85)">
         <g fill="#ffeb3b">
-          <ellipse rx="120" ry="40" transform="rotate(0)"/>
-          <ellipse rx="120" ry="40" transform="rotate(30)"/>
-          <ellipse rx="120" ry="40" transform="rotate(60)"/>
-          <ellipse rx="120" ry="40" transform="rotate(90)"/>
-          <ellipse rx="120" ry="40" transform="rotate(120)"/>
-          <ellipse rx="120" ry="40" transform="rotate(150)"/>
+          <ellipse rx="95" ry="30" transform="rotate(0)"/>
+          <ellipse rx="95" ry="30" transform="rotate(30)"/>
+          <ellipse rx="95" ry="30" transform="rotate(60)"/>
+          <ellipse rx="95" ry="30" transform="rotate(90)"/>
+          <ellipse rx="95" ry="30" transform="rotate(120)"/>
+          <ellipse rx="95" ry="30" transform="rotate(150)"/>
         </g>
-        <circle r="50" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
+        <circle r="40" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
       </g>
 
       <!-- Extremo izquierdo -->
-      <g transform="translate(520,600) scale(0.9)">
+      <g transform="translate(560,520) scale(0.7)">
         <g fill="#ffeb3b">
-          <ellipse rx="100" ry="35" transform="rotate(0)"/>
-          <ellipse rx="100" ry="35" transform="rotate(30)"/>
-          <ellipse rx="100" ry="35" transform="rotate(60)"/>
-          <ellipse rx="100" ry="35" transform="rotate(90)"/>
-          <ellipse rx="100" ry="35" transform="rotate(120)"/>
-          <ellipse rx="100" ry="35" transform="rotate(150)"/>
+          <ellipse rx="85" ry="28" transform="rotate(0)"/>
+          <ellipse rx="85" ry="28" transform="rotate(30)"/>
+          <ellipse rx="85" ry="28" transform="rotate(60)"/>
+          <ellipse rx="85" ry="28" transform="rotate(90)"/>
+          <ellipse rx="85" ry="28" transform="rotate(120)"/>
+          <ellipse rx="85" ry="28" transform="rotate(150)"/>
         </g>
-        <circle r="42" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
+        <circle r="32" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
       </g>
 
       <!-- Extremo derecho -->
-      <g transform="translate(680,600) scale(0.9)">
+      <g transform="translate(640,520) scale(0.7)">
         <g fill="#ffeb3b">
-          <ellipse rx="100" ry="35" transform="rotate(0)"/>
-          <ellipse rx="100" ry="35" transform="rotate(30)"/>
-          <ellipse rx="100" ry="35" transform="rotate(60)"/>
-          <ellipse rx="100" ry="35" transform="rotate(90)"/>
-          <ellipse rx="100" ry="35" transform="rotate(120)"/>
-          <ellipse rx="100" ry="35" transform="rotate(150)"/>
+          <ellipse rx="85" ry="28" transform="rotate(0)"/>
+          <ellipse rx="85" ry="28" transform="rotate(30)"/>
+          <ellipse rx="85" ry="28" transform="rotate(60)"/>
+          <ellipse rx="85" ry="28" transform="rotate(90)"/>
+          <ellipse rx="85" ry="28" transform="rotate(120)"/>
+          <ellipse rx="85" ry="28" transform="rotate(150)"/>
         </g>
-        <circle r="42" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
+        <circle r="32" fill="#5d4037" stroke="#3e2723" stroke-width="3"/>
       </g>
     </g>
 
     <!-- Base dorada elegante -->
     <g fill="#c9a22c">
-      <ellipse cx="600" cy="900" rx="120" ry="35"/>
-      <ellipse cx="540" cy="900" rx="55" ry="25"/>
-      <ellipse cx="660" cy="900" rx="55" ry="25"/>
+      <ellipse cx="600" cy="800" rx="90" ry="25"/>
+      <ellipse cx="560" cy="800" rx="40" ry="18"/>
+      <ellipse cx="640" cy="800" rx="40" ry="18"/>
     </g>
   </svg>
 
@@ -224,6 +246,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
